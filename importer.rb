@@ -10,7 +10,9 @@ class Importer
   end 
 
   def formats
-    { csv: :import_CSV_file }
+    { csv: :import_CSV_file,
+      json: :import_JSON_file
+    }
   end
 
   private
@@ -31,6 +33,8 @@ class Importer
     #this is where new file and type formats are added.
     if /\.csv$/.match(filename)
       "csv"
+    else if /\.json/.match(filename)
+      "json"
     else
       raise "Unknown file extension. Please try another extension or add it to this list:
       *.csv
