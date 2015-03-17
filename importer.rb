@@ -5,7 +5,7 @@ class Importer
 
   #need to instantiate the class because we want an instance to only be able to work on one file at atime.
   def initialize (filename = nil)
-    return " Missing filename to import" if filename.empty?
+    raise " Missing filename to import" if (filename.nil? || filename.empty?)
     import(filename)
   end 
 
@@ -52,7 +52,7 @@ class Importer
   end
 end
 
-def importfile(filename)
+def imported_records(filename)
   importer = Importer.new(filename)
   importer.records
 end

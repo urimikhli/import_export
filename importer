@@ -3,5 +3,5 @@
 require_relative 'importer.rb'
   
 #print calculation to screen for the shell command line
-puts importfile(ARGV[0]).inspect
+puts imported_records(ARGV[0]).inspect
 
