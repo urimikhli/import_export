@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require_relative 'importer.rb'
+  
+#print calculation to screen for the shell command line
+puts importfile(ARGV[0]).inspect
+
