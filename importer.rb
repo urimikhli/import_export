@@ -28,7 +28,7 @@ class Importer
   end
 
   def validate_extension(filename)
-    #this is where new file type formats are added.
+    #this is where new file and type formats are added.
     if /\.csv$/.match(filename)
       "csv"
     else
