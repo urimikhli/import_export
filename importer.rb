@@ -43,8 +43,7 @@ class Importer
   end
 
   def validate_format?(file_format)
-    valid_formats = formats.keys
-    return formats.keys.include? file_format.to_sym
+    formats.keys.include? file_format.to_sym
   end
 
   def import_CSV_file(filename)
