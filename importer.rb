@@ -17,7 +17,7 @@ class Importer
 
   def import(filename)
     #check the file extension and return the file format to use
-    file_format = validate_extension(filename)
+    file_format = valid_extension(filename)
 
     #check the model, default to stock_item
     if validate_format?(file_format)
@@ -27,7 +27,7 @@ class Importer
     end
   end
 
-  def validate_extension(filename)
+  def valid_extension(filename)
     #this is where new file and type formats are added.
     if /\.csv$/.match(filename)
       "csv"
