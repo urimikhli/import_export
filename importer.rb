@@ -33,7 +33,7 @@ class Importer
     #this is where new file and type formats are added.
     if /\.csv$/.match(filename)
       "csv"
-    else if /\.json/.match(filename)
+    elsif /\.json/.match(filename)
       "json"
     else
       raise "Unknown file extension. Please try another extension or add it to this list:
